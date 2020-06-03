@@ -80,6 +80,8 @@ class Game extends React.Component {
     let status;
     if (winner) {
       status = "Winner" + winner;
+    } else if (winInfo.isDraw) {
+      status = "Draw";
     } else {
       status = "Next Player: " + (this.state.xIsNext ? "X" : "O");
     }
