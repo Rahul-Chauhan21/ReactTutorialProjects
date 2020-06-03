@@ -1,9 +1,10 @@
 import React from "react";
 // rewriting square component to a function component since it doesn't have its own state
 function Square(props) {
+  const className = "square" + (props.highlight ? " highlight" : "");
   return (
     //<button className="square" onClick={() => props.onClick()}>
-    <button className="square" onClick={props.onClick}>
+    <button className={className} onClick={props.onClick}>
       {props.value}
     </button>
   );
